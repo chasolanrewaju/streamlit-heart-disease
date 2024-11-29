@@ -1,3 +1,14 @@
+import os
+import sys
+
+# Ensure joblib is installed
+try:
+    import joblib
+except ImportError:
+    os.system(f"{sys.executable} -m pip install joblib")
+    import joblib
+
+
 import streamlit as st
 import numpy as np
 import joblib
